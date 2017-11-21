@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* base */
+
+html, body{ height:100%; }
+body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, form, fieldset, legend, p, blockquote, th, td, button { font-size:inherit; margin:0; padding:0; }
+address, caption, cite, code, dfn, em, var { font-style:normal; font-weight:normal; }
+table { font-size:inherit; border-collapse:collapse; border-spacing:0; }
+hr { display:none; }
+caption { overflow:hidden;width:100%;height:1px;font-size:1px;line-height:0;text-indent:-9999px; margin-top:-1px; }
+legend {  overflow:hidden;width:100%;height:1px;font-size:1px;line-height:0;text-indent:-9999px; margin-top:-1px; }
+fieldset, img { border:0; }
+li { list-style:none; }
+a { color:#767676; text-decoration:none; cursor:pointer ;}
+a:focus,
+a:hover,
+a:active { text-decoration:underline; }
+a:focus {text-decoration:none ;}
+
+/* button { padding:0; border:0; cursor:pointer; background:none; vertical-align:middle; font-size:12px; appearance: none; moz-appearance: none; } */
+.test {border:1px solid red !important;}
+
+.blind {position:absolute; left:-999px ; overflow:hidden; visibility:hidden;}
+.hidden { position:absolute; width:0; height:0; font-size:0; line-height:0; overflow:hidden; visibility:hidden; }
+caption.hidden { position:static; }
+tr.hidden { display:none; }
+
+body, input, select, textarea { font-family: '돋움', Dotum, '굴림', Gulim, sans-serif; font-size: 12px; color: #666; }
+
+#panel {width:300px ; height:300px ; padding:10px ; border:1px solid #ccc ; text-align:center ; position:relative ;}
+#panel img {position:absolute ; left:50% ; top:50% ; margin:-75px 0 0 -75px ; width:150px ;}
+
+.slider {width:800px ; height:600px ; overflow:hidden ; position:relative ; background:#e0e0e0 ;}
+.slider .navi {width:100% ; height:15px ; position:absolute ; bottom:10px ; text-align:center ; z-index:11 ;}
+.slider .navi a {display:inline-block ; width:12px ; height:11px ; overflow:hidden ; text-indent:-999em ; background:url("../images/dot.png") no-repeat ; margin:0 3px ;}
+*:first-child+html .slider .navi a {text-indent:0 ; line-height:0 ; font-size:0 ; overflow:hidden ; vertical-align:top ;}
+.slider .navi a.cur {background-position:0 -11px ;}
+.slider .panel {position:absolute ; width:100% ;}
+.slider .panel ul:after {display:block ; clear:both ; content:"" ;}
+.slider .panel ul li {width:800px ; float:left ;}
+.slider .panel ul li img {width:100% ; height:100% ;}
+.slider .auto {position:absolute ; right:10px ; bottom:10px ; z-index:12 ; width:20px ; height:20px ;}
+.slider .auto a {display:block ; width:20px ; height:20px ; overflow:hidden ; text-indent:-999em ; background:url("../images/btn_play.png") no-repeat ; position:absolute ;}
+.slider .auto a.stop {background-image:url("../images/btn_stop.png") ;}
+.slider .controller a {display:block ; width:40px ; height:26px ; text-align:center ; color:#fff ; font-size:12px ; font-weight:bold ; position:absolute ; top:50% ; margin-top:-13px ;  z-index:10 ; line-height:26px ; text-decoration:none ; box-shadow:0 0 30px #fff ; border-radius:5px ;}
+.slider .controller .prev {left:10px ;}
+.slider .controller .next {right:10px ;}
+
+.slider.thumb {width:800px ; height:600px ; overflow:hidden ; position:relative ; padding-bottom:100px ; background:#e0e0e0 ;}
+.slider.thumb .navi {width:100% ; height:75px ; position:absolute ; bottom:10px ; text-align:center ; z-index:11 ;}
+.slider.thumb .navi a {display:inline-block ; width:100px ; height:75px ; overflow:hidden ; text-indent:-999em ; margin:0 5px ; border:1px solid #fff ; opacity:0.7 ;}
+.slider.thumb .navi a.cur {border:1px solid #f60 ; opacity:1 ;}
+.slider.thumb .navi a.num1 {background:url("../images/bg1num.jpg") no-repeat ; background-size:contain ;}
+.slider.thumb .navi a.num2 {background:url("../images/bg2num.jpg") no-repeat ; background-size:contain ;}
+.slider.thumb .navi a.num3 {background:url("../images/bg3num.jpg") no-repeat ; background-size:contain ;}
+.slider.thumb .navi a.num4 {background:url("../images/bg4num.jpg") no-repeat ; background-size:contain ;}
+.slider.thumb .navi a.num5 {background:url("../images/bg5num.jpg") no-repeat ; background-size:contain ;}
+.slider.thumb .navi a.num6 {background:url("../images/bg6num.jpg") no-repeat ; background-size:contain ;}
+.slider.thumb .auto {position:absolute ; right:10px ; bottom:10px ; z-index:12 ; width:20px ; height:20px ;}
+.slider.thumb .auto a {display:block ; width:20px ; height:20px ; overflow:hidden ; text-indent:-999em ; background:url("../images/btn_play.png") no-repeat ; position:absolute ;}
+.slider.thumb .auto a.stop {background-image:url("../images/btn_stop.png") ;}
+.slider.thumb .auto a.start {background-image:url("../images/btn_play.png") ; display:none ;}
+.slider.thumb .controller a {display:block ; width:40px ; height:26px ; text-align:center ; color:#fff ; font-size:12px ; font-weight:bold ; position:absolute ; top:50% ; margin-top:-63px ;  z-index:10 ; line-height:26px ; text-decoration:none ; box-shadow:0 0 30px #fff ; border-radius:5px ;}
+
+.slider.alpha .panel ul li {width:800px ; position:absolute ; left:0 ; top:0 ;}
